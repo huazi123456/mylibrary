@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="XRecyclerView">
+        <attr name="pulltype">
+            <flag name="PullFull" value="0" />
+            <flag name="PullRefresh" value="1" />
+            <flag name="PullLoadMore" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="BlurImageViewWithLogo">
+        <attr name="logoSize" format="dimension|reference" />
+        <attr name="blurLogo" format="reference|string"/>
+    </declare-styleable>
+    <declare-styleable name="RoundedImageViewExcircle">
+        <attr name="corner_radius" format="dimension" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="mutate_background" format="boolean" />
+        <attr name="oval" format="boolean" />
+        <attr name="android:scaleType" />
+    </declare-styleable>
+
+    <declare-styleable name="rounde_image_view">
+        <attr name="isDrowOutCicle" format="boolean" />
+        <attr name="cicleOutStrokeCorlor" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="rounde_image_view_div">
+        <attr name="rounde_size" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundCornerProgress">
+        <attr name="rcProgress" format="float" />
+        <attr name="rcBackgroundPadding" format="dimension" />
+        <attr name="rcBackgroundRadius" format="dimension" />
+        <attr name="rcMax" format="float" />
+        <attr name="rcIconSrc" format="integer" />
+        <attr name="rcIconSize" format="dimension" />
+        <attr name="rcIconPadding" format="dimension" />
+        <attr name="rcHeaderColor" format="color" />
+        <attr name="rcProgressColor" format="color" />
+        <attr name="rcBackgroundColor" format="color" />
+        <attr name="rcTextProgressColor" format="color" />
+        <attr name="rcTextProgress" format="string" />
+        <attr name="rcTextProgressUnit" format="string" />
+        <attr name="rcTextProgressSize" format="dimension" />
+        <attr name="rcTextProgressWidth" format="dimension" />
+        <attr name="rcTextProgressPadding" format="dimension" />
+        <attr name="rcAutoTextChange" format="boolean" />
+        <attr name="rcSecondaryProgress" format="float" />
+        <attr name="rcSecondaryProgressColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsIndicatorPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="Emojicon">
+        <attr name="emojiconSize" format="dimension" />
+        <attr name="emojiconAlignment" format="enum">
+            <enum name="bottom" value="0" />
+            <enum name="baseline" value="1" />
+        </attr>
+        <attr name="emojiconTextStart" format="integer" />
+        <attr name="emojiconTextLength" format="integer" />
+        <attr name="emojiconUseSystemDefault" format="boolean" />
+    </declare-styleable>
+</resources>
