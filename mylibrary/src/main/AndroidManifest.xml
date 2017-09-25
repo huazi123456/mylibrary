@@ -2,9 +2,16 @@
 
     package="com.mylibrary">
 
-    <application android:allowBackup="true" android:label="@string/app_name"
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
         android:supportsRtl="true">
-
+        <activity
+            android:name="com.permission.PermissionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:theme="@style/permission"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />/>
     </application>
 
 </manifest>

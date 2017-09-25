@@ -76,4 +76,16 @@
         <attr name="emojiconTextLength" format="integer" />
         <attr name="emojiconUseSystemDefault" format="boolean" />
     </declare-styleable>
+
+    <!--自定义相机-->
+    <attr name="iconSize" format="dimension"/>
+    <attr name="iconMargin" format="dimension"/>
+    <attr name="iconSrc" format="reference"/>
+    <attr name="duration_max" format="integer"/>
+    <declare-styleable name="JCameraView">
+        <attr name="iconSize"/>
+        <attr name="iconMargin"/>
+        <attr name="iconSrc"/>
+        <attr name="duration_max"/>
+    </declare-styleable>
 </resources>

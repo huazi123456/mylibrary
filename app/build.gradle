@@ -4,13 +4,22 @@ apply plugin: 'android-apt'
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
     defaultConfig {
         applicationId "com.myapp"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -21,9 +30,12 @@ android {
 }
 
 dependencies {
+    // MultiDex的依赖
+    compile 'com.android.support:multidex:1.0.0'
     //butterknife
     compile 'com.jakewharton:butterknife:8.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
     //依赖包
     compile project(':mylibrary')
+    //compile 'com.github.huazi123456:mylibrary:v1.0.0'
 }

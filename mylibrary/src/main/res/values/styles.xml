@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -21,5 +21,9 @@
         <item name="android:button">@drawable/checkbox_selectors</item>
         <item name="android:paddingLeft">10.0dp</item>
         <item name="android:height">35.0dp</item>
+    </style>
+
+    <style name="permission" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
     </style>
 </resources>

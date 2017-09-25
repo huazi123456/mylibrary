@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="197dp"
-        android:layout_height="197dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:src="@mipmap/ic_default_square"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

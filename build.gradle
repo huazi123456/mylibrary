@@ -3,7 +3,6 @@
 buildscript {
     repositories {
         jcenter()
-        maven { url 'https://jitpack.io' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
@@ -17,9 +16,27 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        //maven { url 'https://maven.google.com' }
+        //maven { url 'https://jitpack.io' }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+//多dex打包
+afterEvaluate {
+    tasks.matching {
+        it.name.startsWith('dex')
+    }.each { dx ->
+        if (dx.additionalParameters == null) {
+            dx.additionalParameters = []
+        }
+        dx.additionalParameters += '--multi-dex' // enable multidex
+        dx.additionalParameters += '--minimal-main-dex'
+        dx.additionalParameters += '--set-max-idx-number=40000'
+        // optional
+        // dx.additionalParameters += "--main-dex-list=$projectDir/<filename>".toString() // enable the main-dex-list
+    }
 }

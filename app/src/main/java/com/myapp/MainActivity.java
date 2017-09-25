@@ -1,17 +1,17 @@
 package com.myapp;
 
 import android.content.Intent;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.base.BaseRecyclerActivity;
 import com.irecyclerview.BaseViewHolder;
 import com.irecyclerview.IRecyclerView;
 import com.irecyclerview.RecycleBaseAdapter;
 import com.myapp.model.ActivityModel;
+import com.utils.OrientationUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +25,7 @@ public class MainActivity extends BaseRecyclerActivity<IRecyclerView> {
     IRecyclerView mIRecyclerView;
 
     List<ActivityModel> mList = new ArrayList<>();
+    private OrientationUtils utils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,10 @@ public class MainActivity extends BaseRecyclerActivity<IRecyclerView> {
     protected void initView() {
         setTitle("主页");
         super.initView();
+        utils = new OrientationUtils(this, SensorManager.SENSOR_DELAY_NORMAL);
+        if (utils.canDetectOrientation()){
+            utils.enable();
+        }
     }
 
     @Override
@@ -60,6 +65,7 @@ public class MainActivity extends BaseRecyclerActivity<IRecyclerView> {
                         } catch (ClassNotFoundException e) {
                             e.printStackTrace();
                         }
+                        //startActivity(new Intent(MainActivity.this, CameraTwoActivity.class));
                     }
                 });
             }
@@ -69,8 +75,8 @@ public class MainActivity extends BaseRecyclerActivity<IRecyclerView> {
 
     @Override
     protected void initHeader() {
-        View header = LayoutInflater.from(this).inflate(R.layout.item_avtivity_name, (ViewGroup) findViewById(android.R.id.content), false);
-        mIRecyclerView.addHeaderView(header);
+//        View header = LayoutInflater.from(this).inflate(R.layout.item_avtivity_name, (ViewGroup) findViewById(android.R.id.content), false);
+//        mIRecyclerView.addHeaderView(header);
     }
 
     @Override
@@ -92,14 +98,32 @@ public class MainActivity extends BaseRecyclerActivity<IRecyclerView> {
         model.setName("KeepActivity");
         mList.add(model);
 
-        model = new ActivityModel();
-        model.setName("GlideActivity");
-        mList.add(model);
+//        model = new ActivityModel();
+//        model.setName("GlideActivity");
+//        mList.add(model);
 
         model = new ActivityModel();
         model.setName("MediaActivity");
         mList.add(model);
 
+//        model = new ActivityModel();
+//        model.setName("StickyActivity");
+//        mList.add(model);
+
+        model = new ActivityModel();
+        model.setName("CameraOldActivity");
+        mList.add(model);
+
+        model = new ActivityModel();
+        model.setName("StartCameraActivity");
+        mList.add(model);
+
         executeOnLoadDataSuccess(mList, mList.size());
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        utils.disable();
     }
 }
