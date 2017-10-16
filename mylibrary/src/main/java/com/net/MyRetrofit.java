@@ -31,7 +31,8 @@ public class MyRetrofit extends BaseRetrofit {
     }
 
     public Observable<UserModel> getUserInfo(String user) {
-        return mApis.getUserInfo(user).compose(RxUtil.<UserModel>scheduleRxHelper());
+        return mApis.getUserInfo(user)
+                .compose(RxUtil.<UserModel>scheduleRxHelper());
     }
 
     public Observable<UcityMode> getUcity(Map<String, String> map) {

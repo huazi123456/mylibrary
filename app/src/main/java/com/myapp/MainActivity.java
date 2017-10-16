@@ -47,6 +47,8 @@ public class MainActivity extends BaseRecyclerActivity<IRecyclerView> {
 
     @Override
     protected void setRecyclerView() {
+//        mIRecyclerView.setLoadingMoreEnabled(false);
+//       mIRecyclerView.setPullRefreshEnabled(false);
         mRecyclerView = mIRecyclerView;
     }
 
@@ -106,9 +108,9 @@ public class MainActivity extends BaseRecyclerActivity<IRecyclerView> {
         model.setName("MediaActivity");
         mList.add(model);
 
-//        model = new ActivityModel();
-//        model.setName("StickyActivity");
-//        mList.add(model);
+        model = new ActivityModel();
+        model.setName("StickyActivity");
+        mList.add(model);
 
         model = new ActivityModel();
         model.setName("CameraOldActivity");
@@ -116,6 +118,10 @@ public class MainActivity extends BaseRecyclerActivity<IRecyclerView> {
 
         model = new ActivityModel();
         model.setName("StartCameraActivity");
+        mList.add(model);
+
+        model = new ActivityModel();
+        model.setName("RxActivity");
         mList.add(model);
 
         executeOnLoadDataSuccess(mList, mList.size());

@@ -46,6 +46,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
         setContentView(layoutResId);
         mContext = this;
         Log.i("ActivityName", "所在Activity = " + ACTIVITY_NAME);
+
     }
 
     @Override

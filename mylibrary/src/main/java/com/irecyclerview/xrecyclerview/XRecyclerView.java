@@ -75,6 +75,7 @@ public class XRecyclerView extends RecyclerView {
     private void init(AttributeSet attrs) {
         TypedArray array = getContext().obtainStyledAttributes(attrs, R.styleable.XRecyclerView);
         mPullType = array.getInt(R.styleable.XRecyclerView_pulltype, PULLFULL);
+        array.recycle();
         switch (mPullType) {
             case PULLFULL:
                 pullRefreshEnabled = true;

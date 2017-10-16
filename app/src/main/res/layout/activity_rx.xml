@@ -5,28 +5,28 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/play100"
+        android:id="@+id/mRx1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Play" />
+        android:text="mRx1" />
 
     <Button
-        android:id="@+id/more100"
+        android:id="@+id/mRx2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="More" />
+        android:text="mRx2" />
 
     <Button
-        android:id="@+id/pause100"
+        android:id="@+id/mRx3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Pause" />
+        android:text="mRx3" />
 
     <TextView
-        android:id="@+id/textvbb100"
+        android:id="@+id/mText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="hello" />
 

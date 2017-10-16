@@ -37,6 +37,7 @@
         <activity
             android:name=".activity.CameraOldActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".activity.RxActivity"/>
     </application>
 
 </manifest>

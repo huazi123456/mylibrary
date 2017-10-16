@@ -50,8 +50,8 @@ public class StickyActivity extends BaseRecyclerActivity<IRecyclerView> {
 
     @Override
     protected void setRecyclerView() {
-        mIRecyclerView.setPullRefreshEnabled(false);
-        mIRecyclerView.setLoadingMoreEnabled(false);
+//        mIRecyclerView.setPullRefreshEnabled(false);
+//        mIRecyclerView.setLoadingMoreEnabled(false);
         mRecyclerView = mIRecyclerView;
     }
 
